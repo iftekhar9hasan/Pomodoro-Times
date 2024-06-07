@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>POMODORO APP</h1>
+        <div id="timer">25:00</div>
+        <div class="button-container">
+            <button id="start">Start</button>
+            <button id="stop">Stop</button>
+            <button id="reset">Reset</button>
+            <button id="settings">Settings</button>
+        </div>
+
+        <div class="right-col">
+            <p>Click Here To Listen</p>
+            <img src="media/play.png" id="icon">
+        </div>
+
+        <audio id="mySong">
+            <source src="media/peace-mode.mp3" type="audio/mp3">
+        </audio>
+
+        <!-- <div class="copyright">
+            <p>Copyright &#169; 2024 Iftekhar Hasan. All Rights Reserved.</p>
+        </div> -->
+
+        <div class="copyright">
+            <p>
+                Copyright &copy; <span id="current-year"></span> Iftekhar Hasan. All Rights Reserved.
+            </p>
+        </div>
+
+    </div>
+
+
+    <!-- Modal Structure -->
+    <div id="settings-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Settings</h2>
+            <label for="time">Set Timer (minutes):</label>
+            <input type="number" id="time" min="1" max="60" value="25">
+            <br><br>
+            <label for="background-image">Select Background Image:</label>
+            <select id="background-image">
+                <option value="">None</option>
+                <option value="japan_blossom.jpg">Japan Blossom</option>
+                <option value="michigan_lake.jpg">Michigan Lake</option>
+                <option value="newyork_city.jpg">New York City</option>
+                <option value="milky_way.jpg">Milky Way</option>
+                <option value="muddy_window.jpg">Muddy Window</option>
+                <option value="brick_wall.jpg">Brick Wall</option>
+                <option value="fall_tree.jpg">Fall  Tree</option>
+                <option value="fire_lite.jpg">Fire Lite</option>
+            </select>
+            <br>
+            <button id="apply">Apply</button>
+        </div>
+    </div>
+
+    <!-- <audio id="alarm-sound" src="media/alarm.mp3" preload="auto"></audio> -->
+
+
+    <script src="script.js"></script>
+</body>
+</html>
